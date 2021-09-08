@@ -1,0 +1,18 @@
+{
+  "name": "benchmark",
+  "scripts": {
+    "dev": "nodemon index",
+    "attack-dev": "nodemon attack.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^4.1.1",
+    "mongodb-memory-server": "^7.4.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12",
+    "pretty-bytes": "^5.6.0",
+    "randomstring": "^1.2.1",
+    "response-time": "^2.3.2",
+    "unirest": "^0.6.0"
+  }
+}
