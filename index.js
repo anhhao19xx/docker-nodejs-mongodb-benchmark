@@ -22,7 +22,7 @@ const wait = (ms) => {
 
 app.get('/', async (req, res) => {
   // simulate handle
-  let str = randomstring.generate(32);
+  let str = randomstring.generate(1024);
   sessions.push(str);
   if (db)
     await db.collection('logs').insertOne({ log: str });
