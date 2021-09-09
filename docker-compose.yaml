@@ -19,6 +19,14 @@ services:
       - APP_VERSION=1.0
     depends_on: 
       - mongodb
+    deploy:
+      resources:
+        limits:
+          cpus: 0.50
+          memory: 256M
+        reservations:
+          cpus: 0.25
+          memory: 128M
 
   mongodb:
     image: 'mongo'
@@ -31,6 +39,14 @@ services:
       - '27017-27019:27017-27019'
     networks:
       - nodeapp-network
+    deploy:
+      resources:
+        limits:
+          cpus: 0.50
+          memory: 256M
+        reservations:
+          cpus: 0.25
+          memory: 128M
 
 
 networks:
